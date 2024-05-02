@@ -4,10 +4,14 @@ To build and run:
 turbo run -w angry-bonk
 ```
 
+```bash
+ctrl + r to reload
+```
+
 ## Multiplayer
 
 ```bash
-turbo host . -p 3
+turbo host . -p 2
 ```
 
 get session id:

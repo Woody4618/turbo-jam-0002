@@ -4,16 +4,53 @@ import initTurbo, * as turbo from "./pkg/turbo_genesis_host_wasm_bindgen.js";
 /* CONFIGURATION                                  */
 /**************************************************/
 
-
-const APP_NAME = "";
-const APP_VERSION = "";
-const APP_AUTHOR = "";
-const APP_DESCRIPTION = "";
+const APP_NAME = "Angry Bonk";
+const APP_VERSION = "1.0";
+const APP_AUTHOR = "Jonas und Eike";
+const APP_DESCRIPTION = "Defend the sheep from the angry bonk";
 const RESOLUTION = [800, 600];
 const WASM_SRC = "angry_bonk.wasm";
-        
 
-const SPRITES = ["./sprites/dog.png","./sprites/cloud-5.png","./sprites/wood-hbeam-1.png","./sprites/dead_sheep.png","./sprites/cloud-4.png","./sprites/create-big.png","./sprites/cloud-6.png","./sprites/sheep_closed.png","./sprites/cloud-7.png","./sprites/bonk.png","./sprites/ball.png","./sprites/cloud-3.png","./sprites/cloud-2.png","./sprites/cloud-1.png","./sprites/man-front.png","./sprites/sheep_animation.gif","./sprites/cannon_wheel.png","./sprites/crate-metal.png","./sprites/wood-dbeam-1.png","./sprites/sheep.png","./sprites/explosion_sheet.png","./sprites/cannon_barrel.png","./sprites/grass_patch.png","./sprites/cannon_flame2.png","./sprites/man-back.png","./sprites/angry.png","./sprites/cannon_flame.png","./sprites/crate-small.png","./sprites/logo.png","./sprites/logo_bonk.png","./sprites/wood-beam-2.png","./sprites/wood-beam-1.png","./sprites/logo_angry.png","./sprites/sheep_animation.png","./sprites/log.png","./sprites/bonk-dog.png","./sprites/crate-small-dmg1.png","./sprites/barrel.png","./sprites/cloud-8.png",];
+const SPRITES = [
+  "./sprites/dog.png",
+  "./sprites/cloud-5.png",
+  "./sprites/wood-hbeam-1.png",
+  "./sprites/dead_sheep.png",
+  "./sprites/cloud-4.png",
+  "./sprites/create-big.png",
+  "./sprites/cloud-6.png",
+  "./sprites/sheep_closed.png",
+  "./sprites/cloud-7.png",
+  "./sprites/bonk.png",
+  "./sprites/ball.png",
+  "./sprites/cloud-3.png",
+  "./sprites/cloud-2.png",
+  "./sprites/cloud-1.png",
+  "./sprites/man-front.png",
+  "./sprites/sheep_animation.gif",
+  "./sprites/cannon_wheel.png",
+  "./sprites/crate-metal.png",
+  "./sprites/wood-dbeam-1.png",
+  "./sprites/sheep.png",
+  "./sprites/explosion_sheet.png",
+  "./sprites/cannon_barrel.png",
+  "./sprites/grass_patch.png",
+  "./sprites/cannon_flame2.png",
+  "./sprites/man-back.png",
+  "./sprites/angry.png",
+  "./sprites/cannon_flame.png",
+  "./sprites/crate-small.png",
+  "./sprites/logo.png",
+  "./sprites/wood-beam-2.png",
+  "./sprites/wood-beam-1.png",
+  "./sprites/logo_angry.png",
+  "./sprites/sheep_animation.png",
+  "./sprites/log.png",
+  "./sprites/bonk-dog.png",
+  "./sprites/crate-small-dmg1.png",
+  "./sprites/barrel.png",
+  "./sprites/cloud-8.png",
+];
 
 /**************************************************/
 

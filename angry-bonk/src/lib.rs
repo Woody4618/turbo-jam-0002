@@ -5,7 +5,7 @@ turbo::cfg!(
     ws-rpc-url = "https://api.devnet.solana.com:8900"
     name = "Angry Dogs"
     version = "1.0.0"
-    author = "Turbo"
+    author = "Turbo" 
     description = "Launch dogs to knock down structures!"
     [settings]
     resolution = [800, 600]
@@ -93,14 +93,15 @@ turbo::go! {
 
     if state.game_state == GameStateEnum::Ready {
         if
-            (mouse(0).left.just_pressed() ||
-                gamepad(0).start.just_pressed() ||
-                gamepad(1).start.just_pressed()) &&
+            (mouse(0).left.just_pressed() || mouse(1).left.just_pressed() ||
+            gamepad(0).start.just_pressed() ||
+            gamepad(1).start.just_pressed() && state.placed_crates == 0) &&
             !state.is_flying
         {
+            let sheep_start_pos_x = 450 + (rand() % 100) * 3;
             let mut target = Target {
-                x: mouse(0).position[0] as f32,
-                y: mouse(0).position[1] as f32,
+                x: sheep_start_pos_x as f32,
+                y: 200 as f32,
                 vel_x: 0.0,
                 vel_y: 0.0,
                 width: 56.0,
@@ -138,7 +139,7 @@ turbo::go! {
         }
     } else if state.game_state == GameStateEnum::PlacingCrates {
         if
-            (mouse(0).left.just_pressed() ||
+            (mouse(0).left.just_pressed() || mouse(1).left.just_pressed() ||
                 gamepad(0).start.just_pressed() ||
                 gamepad(1).start.just_pressed()) &&
             !state.is_flying
@@ -367,14 +368,14 @@ turbo::go! {
     if state.game_state == GameStateEnum::PlacingCrates {
         let remaining_crates = 6 - state.placed_crates;
         let formatted_string = &format!("Place {} more crates", remaining_crates).to_string();
-        text!("Player Bonk", x = 300, y = 230, color = 0x000000ff, font = Font::XL);
+        text!("Player Sheep", x = 300, y = 230, color = 0x000000ff, font = Font::XL);
         text!(formatted_string, x = 300, y = 250, color = 0x000000ff, font = Font::XL);
     }
 
     if state.game_state == GameStateEnum::Shooting {
         let remaining_crates = 3 - state.shots_fired;
         let formatted_string = &format!("{} shots left", remaining_crates).to_string();
-        text!("Player Sheep", x = 300, y = 230, color = 0x000000ff, font = Font::XL);
+        text!("Player Bonk", x = 300, y = 230, color = 0x000000ff, font = Font::XL);
         text!(formatted_string, x = 300, y = 250, color = 0x000000ff, font = Font::XL);
     }
 

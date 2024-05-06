@@ -10,5 +10,9 @@ turbo = { version = "1.2.1", package = "turbo-genesis-sdk", features = [
 "solana",
 ]}
 
+[patch.crates-io]
+jobserver = { git = "https://github.com/jozanza/jobserver-rs.git", branch = "main" }
+cc = { git = "https://github.com/jozanza/cc-rs.git", branch = "1.0.94" }
+
 [lib]
 crate-type = ["cdylib"]
